@@ -1,23 +1,23 @@
 <template>
   <div id="app">
-    <TsxTest />
-    <div v-for="(item, index) in list" :key="index">
-      <component :is="item"/>
-    </div>
+    <Container />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import TsxTest, { List } from '@/components/TsxTest'
+// import TsxTest, { List } from '@/components/jsx/TsxTest'
+import Container from './components/jsx/Container.vue'
+
 
 @Component({
   components: {
-    TsxTest,
+    // TsxTest,
+    Container
   },
 })
 export default class Home extends Vue {
-  list = List
+  // list = List
 }
 </script>
 
